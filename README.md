@@ -1,0 +1,3 @@
+# FREZA
+## Dependecies
+- opencv
