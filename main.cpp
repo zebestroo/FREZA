@@ -8,7 +8,7 @@ using namespace cv;
 //Fun taska convert to black color
 int main()
 {
-	Mat myimg = imread("lalka.jpg");
+	Mat myimg = imread("photo.jpg");
 	ofstream out("file.txt");
 	if(out.is_open())	
 	for(int i = 0; i < myimg.rows; i++) //Sortirovka na 4ernoe i beloe...
@@ -32,7 +32,9 @@ int main()
 			}
 		}
 		out << '\n';
-		
+		i++;
+		if(i >= myimg.rows)
+			break;
 		for(int j = myimg.cols; j >= 0; j--)
         	//Tyt 4isla 150 variiryesh i menyaesh spectr obrabotki
 		{
