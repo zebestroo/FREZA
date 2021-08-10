@@ -9,7 +9,7 @@ using namespace cv;
 int main()
 {
 	Mat myimg = imread("photo.jpg");
-	ofstream out("file.txt");
+	ofstream out("file1.txt");
 	if(out.is_open())	
 	for(int i = 0; i < myimg.rows; i++) //Sortirovka na 4ernoe i beloe...
         {
@@ -18,14 +18,14 @@ int main()
 		{
 			if(myimg.at<Vec3b>(i,j)[0] < 150 && myimg.at<Vec3b>(i,j)[1] < 150  && myimg.at<Vec3b>(i,j)[2] < 150)
 			{
-				out << 0;
+				out << 1;
 				myimg.at<Vec3b>(i,j)[0]= 0;
                        		myimg.at<Vec3b>(i,j)[1]= 0;
                         	myimg.at<Vec3b>(i,j)[2]= 0;
 			}
 			else
 			{
-				out << 1;
+				out << 0;
 				myimg.at<Vec3b>(i,j)[0]= 255;
                                 myimg.at<Vec3b>(i,j)[1]= 255;
                                 myimg.at<Vec3b>(i,j)[2]= 255;
@@ -40,14 +40,14 @@ int main()
 		{
 			if(myimg.at<Vec3b>(i,j)[0] < 150 && myimg.at<Vec3b>(i,j)[1] < 150  && myimg.at<Vec3b>(i,j)[2] < 150)
 			{
-				out << 0;
+				out << 1;
 				myimg.at<Vec3b>(i,j)[0]= 0;
                        		myimg.at<Vec3b>(i,j)[1]= 0;
                         	myimg.at<Vec3b>(i,j)[2]= 0;
 			}
 			else
 			{
-				out << 1;
+				out << 0;
 				myimg.at<Vec3b>(i,j)[0]= 255;
                                 myimg.at<Vec3b>(i,j)[1]= 255;
                                 myimg.at<Vec3b>(i,j)[2]= 255;
