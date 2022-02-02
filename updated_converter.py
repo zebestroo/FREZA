@@ -1,5 +1,5 @@
 from cv2 import cv2
-import math
+
 
 def point(ls, tup):
     for tp in ls:
@@ -50,9 +50,5 @@ with open("file.txt", "w") as file:
                 color = False
                 continue 
     search(file, ls)
-    print(ls) 
 
-cv2.imwrite('black_white.jpg', image)
-cv2.imshow('black_white', image)
-cv2.waitKey(0)
 file.close()
